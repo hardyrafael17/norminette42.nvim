@@ -1,0 +1,15 @@
+- Todo: Todo for norminette (high level)
+   Todo
+
+
+   Done
+    - Excecute external comand(vim api or lua)
+    - Parse output and segregate output
+    - Send diagnostics to neovim (vim.api)
+    - Implement fix all option
+      - Implement fix single item option
+
+   WorkingOn
+
+   Bugs
+
