@@ -1,0 +1,7 @@
+/Users/hardy/projects/norminette42/test.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: SPACE_REPLACE_TAB    (line:   5, col:   8):	Found space when expecting tab
+Error: CONSECUTIVE_NEWLINES (line:   7, col:   1):	Consecutive newlines
+Error: EMPTY_LINE_FUNCTION  (line:   7, col:   1):	Empty line in function
+Error: NO_SPC_AFR_PAR       (line:   9, col:  27):	Extra space after parenthesis (brace/bracket)
+Error: EMPTY_LINE_EOF       (line:  12, col:   1):	Empty line at end of file

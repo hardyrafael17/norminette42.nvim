@@ -1,15 +1,18 @@
 - Todo: Todo for norminette (high level)
    Todo
-
-
-   Done
-    - Excecute external comand(vim api or lua)
     - Parse output and segregate output
     - Send diagnostics to neovim (vim.api)
     - Implement fix all option
       - Implement fix single item option
 
+
+   Done
+    - Excecute external comand(vim api or lua) (io.popen(cmd, open_mode))
+      - capture command output and save in in a table
+
+
    WorkingOn
+    - generate a diagnostic (diagnostic-api)
 
    Bugs
 
