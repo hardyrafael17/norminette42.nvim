@@ -58,12 +58,6 @@ Development is focused on:
 * Performance
 * Making fix commands for auto fix
 
-### Events
-
-Users may subscribe to events that nvim-tree will dispatch in a variety of situations.
-
-[:help nvim-tree-events](doc/nvim-tree-lua.txt)
-
 ### Actions
 
 Custom actions may be mapped which can invoke API or perform your own actions.
