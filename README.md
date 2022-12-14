@@ -62,13 +62,9 @@ Development is focused on:
 
 Custom actions may be mapped which can invoke API or perform your own actions.
 
-[:help nvim-tree-mappings](doc/nvim-tree-lua.txt)
-
 ## Contributing
 
-PRs are always welcome. See [wiki](https://github.com/nvim-tree/nvim-tree.lua/wiki/Development) to get started.
-
-See [bug](https://github.com/nvim-tree/nvim-tree.lua/issues?q=is%3Aissue+is%3Aopen+label%3Abug) and [PR Please](https://github.com/nvim-tree/nvim-tree.lua/issues?q=is%3Aopen+is%3Aissue+label%3A%22PR+please%22) issues if you are looking for some work to get you started.
+PRs are always welcome.
 
 ### Help Wanted
 
