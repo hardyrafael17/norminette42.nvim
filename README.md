@@ -1,6 +1,6 @@
 # Norminette integration for Neovim written in lua
 
-See [Showcases](https://github.com/hardyrafael17/norminette42.nvim/wiki/showcase/showcase1.png)
+See [Showcases](https://github.com/hardyrafael17/norminette42.nvim/blob/main/wiki/showcase/showcase1.png)
 
 Norminette Diagnostigs
 
