@@ -1,5 +1,7 @@
 # Norminette integration for Neovim written in lua
 
+See [Showcases](https://github.com/hardyrafael17/norminette42.nvim/wiki/showcase/showcase1.png)
+
 Norminette Diagnostigs
 
 <br clear="left"/>
@@ -42,7 +44,7 @@ require("norminette").setup({
 
 Basic commands:
 
-`:Norminette42` Run norminette on opened file (it needs to be a *.c or an *.h file.
+`:Norminette42` Run norminette on current open file (it needs to be a *.c or an *.h file.)
 
 ## Mappings
 
@@ -72,4 +74,5 @@ Users for testing, also if anyone wants to help develope, it would be nice
 
 ## Screenshots
 
-TODO add wiki and showcase
+See [Showcases](https://github.com/hardyrafael17/norminette42.nvim/wiki/showcase/showcase1.png)
+
