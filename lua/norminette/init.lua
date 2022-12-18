@@ -1,7 +1,6 @@
 local M = {}
 
 M.setup = function(opts)
-  vim.api.nvim_create_user_command('Norminette42', 'lua Norminette42()', {})
 
   opts.runOnSave = opts.runOnSave or false
   opts.email42 = opts.email42 or nil -- Todo
@@ -29,10 +28,10 @@ M.setup = function(opts)
   })
   end
 
+  -- Insert or replace current header if it exist
   function Norminette42Header()
     local ok, header = pcall(require, "header")
     if not ok then
-      print("failed to load 42Header module")
       return false
     end
     header.Header()
