@@ -1,8 +1,10 @@
 # Norminette integration for Neovim written in lua
 
-See [Showcases](https://github.com/hardyrafael17/norminette42.nvim/wiki/showcase/showcase1.png)
-
 Norminette Diagnostigs
+![view of norminette diagnostics](https://github.com/hardyrafael17/norminette42.nvim/blob/main/wiki/showcase/showcase1.png)
+
+42 Header
+![view of norminette diagnostics](https://github.com/hardyrafael17/norminette42.nvim/blob/main/wiki/showcase/showcase2.gif)
 
 <br clear="left"/>
 <br />
@@ -32,6 +34,10 @@ Setup should be run in a lua file or in a lua heredoc [:help lua-heredoc](https:
 
 -- empty setup using defaults
 require("norminette").setup()
+```
+
+```lua
+-- examples for your init.lua
 
 -- OR setup with some options
 require("norminette").setup({
@@ -44,7 +50,7 @@ require("norminette").setup({
 
 Basic commands:
 
-`:Norminette42` Run norminette on current open file (it needs to be a *.c or an *.h file.)
+`:Header42` Inserts the 42 Header or updates it if it finds one.
 
 ## Mappings
 
@@ -70,7 +76,9 @@ PRs are always welcome.
 
 ### Help Wanted
 
-Users for testing, also if anyone wants to help develope, it would be nice
+This is for sure a ver ugly and buggy plugin, (It's my first one), so expect bugs, Please report it by creating an issue.
+
+Users for testing, also if anyone wants to help develope, it would be nice.
 
 ## Screenshots
 
