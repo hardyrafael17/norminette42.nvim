@@ -1,11 +1,20 @@
 local M = {}
 
-local utils = require("n-utils.functions")
 M.setup = function(opts)
   vim.api.nvim_create_user_command('Norminette42', 'lua Norminette42()', {})
+
+  opts.runOnSave = opts.runOnSave or false
+  opts.email42 = opts.email42 or nil -- Todo
+  opts.username42 = opts.username42 or nil -- Todo
+
+  GlobalNorminetteFunctions = require("n-utils.functions")
+
+  vim.api.nvim_create_user_command('Header42', 'lua Norminette42Header()', {})
+
   local myluafunc = function ()
-    return utils.norminette42(opts.maxErrorsToShow)
+    return GlobalNorminetteFunctions.norminette42(opts.maxErrorsToShow)
   end
+
 -- Check on buffer enter
   vim.api.nvim_create_autocmd({"BufEnter"}, {
     pattern = { "*.c", "*.h" },
@@ -20,7 +29,15 @@ M.setup = function(opts)
   })
   end
 
--- Register user command
+  function Norminette42Header()
+    local ok, header = pcall(require, "header")
+    if not ok then
+      print("failed to load 42Header module")
+      return false
+    end
+    header.Header()
+  end
+
 end
 
 return M

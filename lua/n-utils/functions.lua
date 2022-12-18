@@ -59,6 +59,7 @@ function M.norminette42(maxErrorsToShow)
   fileHandle:close()
   local diagnostics = M.parseError(returnTable, bufferHandle, maxErrorsToShow)
   vim.diagnostic.set(nameSpaceId, bufferHandle, diagnostics, {virtual_text = true})
+  vim.diagnostic.show(nameSpaceId, bufferHandle)
 end
 
 return M
