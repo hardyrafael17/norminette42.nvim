@@ -27,6 +27,10 @@ function M.Header()
   local bufferHandle = vim.api.nvim_get_current_buf()
   -- Create line four
   local currentFileName = vim.fn.expand("%")
+  currentFileName = currentFileName:match( "([^/]+)$" )
+  if not currentFileName then
+    return false, "Error parsing file name"
+  end
   local line_4_1 = "/*   "
   local line_4_2 = currentFileName
   local line_4_3 = ""
