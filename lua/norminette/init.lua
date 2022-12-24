@@ -1,8 +1,14 @@
 local M = {}
 
 M.setup = function(opts)
-  opts.active = opts.active or true
-  if not opts.active then
+  local deactivate
+  if opts.active == false then
+    deactivate = true
+  else
+    deactivate = false
+  end
+
+  if deactivate then
     return
   end
 
