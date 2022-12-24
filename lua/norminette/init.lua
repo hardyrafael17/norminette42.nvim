@@ -1,6 +1,9 @@
 local M = {}
 
 M.setup = function(opts)
+  if not opts.active then
+    return
+  end
 
   opts.runOnSave = opts.runOnSave or false
   opts.email42 = opts.email42 or nil -- Todo
