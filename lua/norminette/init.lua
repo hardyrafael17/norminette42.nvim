@@ -1,6 +1,7 @@
 local M = {}
 
 M.setup = function(opts)
+  opts.active = opts.active or true
   if not opts.active then
     return
   end
