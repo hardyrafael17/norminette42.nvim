@@ -43,6 +43,7 @@ require("norminette").setup()
 require("norminette").setup({
   runOnSave = true,     -- Check for errors after save
   maxErrorsToShow = 5,  -- Only show 5 errors
+  active = true,        -- Optional, can be set to false to deactivate plugin
   })
 ```
 
@@ -79,8 +80,4 @@ PRs are always welcome.
 This is for sure a ver ugly and buggy plugin, (It's my first one), so expect bugs, Please report it by creating an issue.
 
 Users for testing, also if anyone wants to help develope, it would be nice.
-
-## Screenshots
-
-See [Showcases](https://github.com/hardyrafael17/norminette42.nvim/wiki/showcase/showcase1.png)
 
