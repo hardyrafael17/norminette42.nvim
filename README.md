@@ -1,4 +1,4 @@
-# Norminette integration for Neovim written in lua
+# Norminette integration for Neovim written in Lua
 
 Norminette Diagnostigs
 ![view of norminette diagnostics](https://github.com/hardyrafael17/norminette42.nvim/blob/main/wiki/showcase/showcase1.png)
