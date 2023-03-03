@@ -32,13 +32,6 @@ Setup should be run in a lua file or in a lua heredoc [:help lua-heredoc](https:
 ```lua
 -- examples for your init.lua
 
--- empty setup using defaults
-require("norminette").setup()
-```
-
-```lua
--- examples for your init.lua
-
 -- OR setup with some options
 require("norminette").setup({
   runOnSave = true,     -- Check for errors after save
