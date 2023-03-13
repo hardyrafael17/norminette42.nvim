@@ -30,9 +30,7 @@ use {
 Setup should be run in a lua file or in a lua heredoc [:help lua-heredoc](https://neovim.io/doc/user/lua.html) if using in a vim file.
 
 ```lua
--- examples for your init.lua
-
--- OR setup with some options
+-- setup with some options
 require("norminette").setup({
   runOnSave = true,     -- Check for errors after save
   maxErrorsToShow = 5,  -- Only show 5 errors
