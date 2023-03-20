@@ -32,10 +32,15 @@ Setup should be run in a lua file or in a lua heredoc [:help lua-heredoc](https:
 ```lua
 -- setup with some options
 require("norminette").setup({
-  runOnSave = true,     -- Check for errors after save
+  runOnSave = ,         -- Optional, Defaults to trueh, check for errors after save
   maxErrorsToShow = 5,  -- Only show 5 errors
-  active = true,        -- Optional, can be set to false to deactivate plugin
+  active = false,       -- Optional, Defaults to true can be set to false to deactivate plugin
   })
+```
+
+```lua
+-- setup with without options
+require("norminette").setup()
 ```
 
 ## Commands
