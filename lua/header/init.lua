@@ -59,7 +59,9 @@ function M.Header()
     local full_email = " <" .. local_part .. '@' .. domain_part .. ">"
     line_6_2 =  local_part .. full_email
   else
-    return false, "Error parsing email, make sure you have your git user.email configured"
+    error = "Error parsing email, make sure you have your git user.email configured and that it is short haha"
+    print(error)
+    return false, error
   end
   local line_6_1 = "/*   By: "
   local line_6_3 = ""
@@ -79,6 +81,8 @@ function M.Header()
   local currentBufferName = vim.api.nvim_buf_get_name(bufferHandle)
   local status, createdOrError, updated = require("n-utils.time").getCreatedAndModifiedTimes(currentBufferName)
   if not status then
+	  print(createdOrError)
+	  print"returning"
     return createdOrError
   end
 

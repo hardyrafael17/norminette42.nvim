@@ -1,20 +1,20 @@
 local M = {}
 
-M.setup = function(opts)
-  local deactivate
-  if opts.active == false then
-    deactivate = true
+M.setup = function(args)
+
+  local opts = {}
+  if args and args.active == false then
+	return 
+  end
+
+  if args and args.runOnSave then
+	  opts.runOnSave = arg.runOnSave
   else
-    deactivate = false
+	  opts.runOnSave = true
   end
 
-  if deactivate then
-    return
-  end
-
-  opts.runOnSave = opts.runOnSave or false
-  opts.email42 = opts.email42 or nil -- Todo
-  opts.username42 = opts.username42 or nil -- Todo
+  -- opts.email42 = args.email42 or nil -- Todo
+  -- opts.username42 = opts.username42 or nil -- Todo
 
   GlobalNorminetteFunctions = require("n-utils.functions")
 
