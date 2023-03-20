@@ -7,8 +7,8 @@ M.setup = function(args)
 	return 
   end
 
-  if args and args.runOnSave then
-	  opts.runOnSave = arg.runOnSave
+  if args and not args.runOnSave then
+	  opts.runOnSave = false
   else
 	  opts.runOnSave = true
   end
