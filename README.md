@@ -17,22 +17,26 @@ Norminette Diagnostigs
 
 ## Install
 
-With [packer](https://github.com/wbthomason/packer.nvim):
+##### With [packer](https://github.com/wbthomason/packer.nvim):
 
 ```lua
 use {
   'hardyrafael17/norminette42.nvim',
 }
 ```
+##### With [lazy](https://www.lazyvim.org/):
+```lua
+{ "hardyrafael17/norminette42.nvim" },
+```
 
 ## Setup
 
 Setup should be run in a lua file or in a lua heredoc [:help lua-heredoc](https://neovim.io/doc/user/lua.html) if using in a vim file.
-
+##### Packer:
 ```lua
 -- setup with some options
 require("norminette").setup({
-  runOnSave = ,         -- Optional, Defaults to trueh, check for errors after save
+  runOnSave = ,         -- Optional, Defaults to true, check for errors after save
   maxErrorsToShow = 5,  -- Only show 5 errors
   active = false,       -- Optional, Defaults to true can be set to false to deactivate plugin
   })
@@ -41,6 +45,21 @@ require("norminette").setup({
 ```lua
 -- setup with without options
 require("norminette").setup()
+```
+
+##### Lazy
+```lua
+	{
+		"hardyrafael17/norminette42.nvim",
+		config = function()
+		local norminette = require("norminette")
+		norminette.setup({
+				runOnSave = true,
+				maxErrorsToShow = 5,
+				active = true,
+		})
+	end,
+	},
 ```
 
 ## Commands
