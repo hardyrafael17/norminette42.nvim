@@ -19,6 +19,12 @@ M.setup = function(args)
   GlobalNorminetteFunctions = require("n-utils.functions")
 
   vim.api.nvim_create_user_command('Header42', 'lua Norminette42Header()', {})
+  vim.api.nvim_create_user_command('NorminetteDisable', function()
+	  GlobalNorminetteFunctions.NorminetteDisable()
+  end , {})
+  vim.api.nvim_create_user_command('NorminetteEnable', function()
+	  GlobalNorminetteFunctions.NorminetteEnable(opts.maxErrorsToShow)
+  end , {})
 
   local myluafunc = function ()
     return GlobalNorminetteFunctions.norminette42(opts.maxErrorsToShow)

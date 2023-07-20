@@ -1,5 +1,7 @@
 local M = {}
 
+local isEnable = true
+
 function M.isEmpty(s)
   return s == nil or s == ""
 end
@@ -44,7 +46,20 @@ function M.parseError(errorList, bufferHandle, maxErrorsToShow)
   return diagnosticTable
 end
 
+function M.NorminetteDisable()
+	isEnable = false
+	vim.diagnostic.reset()
+end
+
+function M.NorminetteEnable(maxErrorsToShow)
+	isEnable = true
+	M.norminette42(maxErrorsToShow)
+end
+
 function M.norminette42(maxErrorsToShow)
+	if not isEnable then
+		return 
+	end
   local bufferHandle = vim.api.nvim_get_current_buf()
   local currentBufferName = vim.api.nvim_buf_get_name(bufferHandle)
   local nameSpaceId = vim.api.nvim_create_namespace("42norme")
