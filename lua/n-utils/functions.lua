@@ -68,8 +68,10 @@ function M.norminette42(maxErrorsToShow)
   local index = 1
   repeat
     local line = fileHandle:read("*l")
-    returnTable[index] = line -- Maybe need to check for empty lines to avod errors
-    index = index + 1
+    if line and string.find(line, ":") ~= nil then
+      returnTable[index] = line -- Maybe need to check for empty lines to avod errors
+      index = index + 1
+    end
   until (M.isEmpty(line))
   fileHandle:close()
   local diagnostics = M.parseError(returnTable, bufferHandle, maxErrorsToShow)
